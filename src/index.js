@@ -1,9 +1,7 @@
 const express= require('express');
 const app = express();
 app.use(express.json());
-const morgan =require('morgan');
-
-console.log (express)
+const morgan = require('morgan');
 
 //configuraciones
 app.set('puerto' , process.env.PORT || 3500);
@@ -28,7 +26,7 @@ app.use(function (req, res, next) {
     next();
 });
 //  rutas para mi aplicacion
-app.use(require('./router/router'))
+app.use(require('./router/tiendacontrol'))
 // inicia el servidor NODE
 app.listen(app.get('puerto'), ()=>{
     console.log('El servidor corriendo en el puerto',app.get('puerto') )

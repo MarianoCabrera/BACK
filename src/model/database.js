@@ -4,7 +4,7 @@ const mysqlConeccion= mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'admin',
-    database: 'integradorr'
+    database: 'integrador'
 });
 
 mysqlConeccion.connect(function(err){
